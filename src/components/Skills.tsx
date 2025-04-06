@@ -1,5 +1,6 @@
 import expressIcon from "@/assets/stack/expressjs.png";
 import jsIcon from "@/assets/stack/js.svg";
+import mongoIcon from "@/assets/stack/mongodb.svg";
 import nextIcon from "@/assets/stack/next.svg";
 import nodeIcon from "@/assets/stack/nodejs.png";
 import reactIcon from "@/assets/stack/react.png";
@@ -13,7 +14,7 @@ import vueIcon from "@/assets/stack/vue.svg";
 import clsx from "clsx";
 import { Section, SectionTitle } from "./Widgets";
 
-const styles = { icon: "w-auto h-12 !flex-none" };
+const styles = { icon: "w-auto h-12 md:h-20 !flex-none" };
 const Skills = () => {
   return (
     <Section>
@@ -23,7 +24,7 @@ const Skills = () => {
         <img src={jsIcon} className={styles.icon} />
         <img src={tsIcon} className={styles.icon} />
         <img src={reactIcon} className={styles.icon} />
-        <img src={nextIcon} className={styles.icon} />
+        <img src={nextIcon} className={clsx(styles.icon, "bg-neutral-100")} />
 
         <img src={vueIcon} className={styles.icon} />
         <img src={nodeIcon} className={styles.icon} />
@@ -41,6 +42,7 @@ const Skills = () => {
           src={tradingviewIcon}
           className={clsx(styles.icon, "bg-neutral-100")}
         />
+        <img src={mongoIcon} className={styles.icon} />
       </div>
     </Section>
   );
