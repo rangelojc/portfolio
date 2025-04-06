@@ -12,7 +12,7 @@ import App from "./App";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route element={<App />} path="/portfolio" />
+      <Route element={<App />} path="/" />
     </>
   )
 );
