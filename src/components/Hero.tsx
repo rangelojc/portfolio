@@ -13,7 +13,7 @@ const Hero = () => {
     scrollTargetToChild("#appScrollContainer", "#projectsSection", true, -50);
   };
   return (
-    <section className="size-full min-h-[600px] flex-col-center bg-cinder-950 relative overflow-hidden md:h-1/2">
+    <section className="size-full min-h-[600px] flex-col-center bg-primary-950 relative overflow-hidden md:h-1/2">
       <div className="opacity-[3%] absolute z-1 size-full flex-row-center">
         <img
           src={bg}
@@ -33,13 +33,13 @@ const Hero = () => {
 
           <div className="flex-row-center gap-x-4 md:!justify-start text-sm md:text-base">
             <button
-              className={clsx(styles.button, "bg-cinder-700")}
+              className={clsx(styles.button, "bg-primary-700")}
               onClick={goToProjects}
             >
               VIEW MY WORK
             </button>
             <a
-              className={clsx(styles.button, "bg-green-700")}
+              className={clsx(styles.button, "bg-secondary-600")}
               href="mailto:ramceconcepcion@gmail.com"
             >
               CONTACT ME

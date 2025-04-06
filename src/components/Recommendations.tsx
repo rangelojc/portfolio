@@ -2,7 +2,6 @@ import rdHead from "@/assets/recos/devore.jpg";
 import rpHead from "@/assets/recos/paga.jpg";
 import rsHead from "@/assets/recos/seitz.jpg";
 
-import clsx from "clsx";
 import { Section, SectionTitle } from "./Widgets";
 
 const RecommendationEntry = ({
@@ -17,38 +16,32 @@ const RecommendationEntry = ({
   role: string;
   quote: string;
   link: string;
-}) => (
-  <div className="relative flex-col-center w-full py-12 px-4 bg-cinder-900 rounded-md shadow-md gap-y-8 md:!flex-row md:pl-0 md:gap-y-0 md:py-4">
-    <div className="rounded-full size-[220px] overflow-hidden flex-none mx-8 md:size-40 ">
-      <a
-        className="mt-1 text-xs text-blue-400 hover:brightness-125 cursor-pointer transition"
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+}) => {
+  return (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="cursor-pointer flex-col-center w-full py-12 px-4 bg-primary-900 rounded-md shadow-md gap-y-8 group hover:bg-primary-700 hover:scale-101 transition md:!flex-row md:pl-0 md:gap-y-0 md:py-4"
+    >
+      <div className="rounded-full overflow-hidden size-[220px] flex-none mx-8 md:size-40">
         <img src={headshot} />
-      </a>
-    </div>
-    <div className="flex flex-col gap-2">
-      <div className="flex-row-v-center gap-x-1">
-        <h5>
-          <strong>{name}</strong>{" "}
-          <span className="text-neutral-300">— {role}</span>
-        </h5>
       </div>
-      <div>
-        <span className="text-2xl text-neutral-50 absolute">“</span>
-        <p className="indent-4">
-          {quote}{" "}
-          <span className={clsx("text-2xl text-neutral-50 absolute", "-ml-2")}>
-            ”
-          </span>
-        </p>
+      <div className="flex flex-col gap-2 ">
+        <div className="flex-row-v-center gap-x-1">
+          <h5>
+            <strong>{name}</strong>{" "}
+            <span className="text-neutral-300">— {role}</span>
+          </h5>
+        </div>
+        <div className="relative">
+          <span className="text-4xl text-neutral-50 absolute">“</span>
+          <p className="indent-6 italic">{quote}</p>
+        </div>
       </div>
-    </div>
-  </div>
-);
-
+    </a>
+  );
+};
 const Recommendations = () => {
   return (
     <Section>
