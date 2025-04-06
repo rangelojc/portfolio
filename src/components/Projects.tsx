@@ -1,5 +1,6 @@
 import katerThumb from "@/assets/projects/kater/kater (1).png";
 import tbxThumb from "@/assets/projects/tbxm-2.png";
+import vNextDemoThumb from "@/assets/projects/vnext-demostore2.PNG";
 import vNextThumb from "@/assets/projects/vnext-int-3.PNG";
 import zomThumb from "@/assets/projects/zombie-1.png";
 
@@ -28,14 +29,19 @@ const portfolioItems: PortfolioItem[] = [
     imageUrl: tbxThumb,
   },
   {
+    id: 4,
+    title: "Zombied",
+    imageUrl: zomThumb,
+  },
+  {
     id: 3,
     title: "vNext",
     imageUrl: vNextThumb,
   },
   {
-    id: 4,
-    title: "Zombied",
-    imageUrl: zomThumb,
+    id: 5,
+    title: "vNext Demo Store",
+    imageUrl: vNextDemoThumb,
   },
 ];
 
@@ -64,14 +70,14 @@ const Projects = () => {
       >
         {portfolioItems.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="bg-cinder-950 rounded shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
+            <div className="bg-cinder-950 rounded shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 relative">
               <img
                 src={item.imageUrl}
                 alt={item.title}
-                className="w-full h-[400px] scale-100 object-cover group-hover:scale-110 transition-transform duration-300"
+                className="relative z-1 w-full h-[400px] scale-105 object-cover group-hover:scale-110 transition-transform duration-300"
               />
 
-              <div className="p-4">
+              <div className="p-4 relative z-2 bg-cinder-950">
                 <h3 className="text-xl font-medium">{item.title}</h3>
               </div>
             </div>
