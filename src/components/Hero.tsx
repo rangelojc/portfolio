@@ -1,6 +1,7 @@
 import bg from "@/assets/bg.jpg";
 import headshot from "@/assets/headshot.png";
 import clsx from "clsx";
+import { scrollTargetToChild } from "../utils";
 
 const styles = {
   button:
@@ -8,6 +9,9 @@ const styles = {
 };
 
 const Hero = () => {
+  const goToProjects = () => {
+    scrollTargetToChild("#appScrollContainer", "#projectsSection", true, -50);
+  };
   return (
     <section className="size-full min-h-[600px] flex-col-center bg-cinder-950 relative overflow-hidden md:h-1/2">
       <div className="opacity-[3%] absolute z-1 size-full flex-row-center">
@@ -28,7 +32,10 @@ const Hero = () => {
           </p>
 
           <div className="flex-row-center gap-x-4 md:!justify-start text-sm md:text-base">
-            <button className={clsx(styles.button, "bg-cinder-700")}>
+            <button
+              className={clsx(styles.button, "bg-cinder-700")}
+              onClick={goToProjects}
+            >
               VIEW MY WORK
             </button>
             <a

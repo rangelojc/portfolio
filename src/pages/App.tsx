@@ -8,7 +8,7 @@ import Skills from "../components/Skills";
 
 function App() {
   return (
-    <main className="h-screen w-screen overflow-auto">
+    <main className="h-screen w-screen overflow-auto" id="appScrollContainer">
       <Hero />
       <div className="space-y-40">
         <Skills />
