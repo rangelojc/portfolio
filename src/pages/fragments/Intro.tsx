@@ -1,16 +1,18 @@
 import { Section } from "./Widgets";
 
 const Intro = () => {
+  const yearsOfExperience = new Date().getFullYear() - 2017;
+
   return (
     <Section className="mt-20 flex-row-center">
       <div className="w-full md:w-2/3 lg:w-1/2">
         <p className="text-center text-lg">
-          Hi, I'm Ramce, a Software Engineer with over 8 years of experience
-          building scalable, maintainable, and user-friendly web applications. I
-          specialize in frontend technologies, with a deep focus on React.
-          Throughout my career, I've worked with a variety of employers &
-          clients, from startups to established companies, helping them craft
-          seamless user experiences.
+          I'm a software / frontend engineer with {yearsOfExperience} years of
+          experience building scalable, maintainable, and user-friendly web
+          applications. I specialize in frontend technologies, with a deep focus
+          on React. Throughout my career, I've worked with a variety of
+          employers & clients, from startups to established companies, helping
+          them craft seamless user experiences.
         </p>
       </div>
 
