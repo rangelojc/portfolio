@@ -1,6 +1,9 @@
 import expressIcon from "@/assets/stack/expressjs.png";
 import jsIcon from "@/assets/stack/js.svg";
 import mongoIcon from "@/assets/stack/mongodb.svg";
+import mySqlIcon from "@/assets/stack/mysql.svg";
+import sqlserverIcon from "@/assets/stack/sqlserver.png";
+
 import nextIcon from "@/assets/stack/next.svg";
 import nodeIcon from "@/assets/stack/nodejs.png";
 import reactIcon from "@/assets/stack/react.png";
@@ -15,16 +18,20 @@ import clsx from "clsx";
 import { Section, SectionTitle } from "./Widgets";
 
 const styles = { icon: "w-auto h-12 md:h-20 !flex-none" };
+
 const Skills = () => {
   return (
     <Section>
       <SectionTitle>Skills</SectionTitle>
 
-      <div className="flex flex-wrap justify-center w-full md:w-3/4lg:w-1/2 gap-x-8 gap-y-4">
+      <div className="flex flex-wrap justify-center w-full gap-6 md:gap-8 md:w-2/3 lg:w-1/2">
         <img src={jsIcon} className={styles.icon} />
         <img src={tsIcon} className={styles.icon} />
         <img src={reactIcon} className={styles.icon} />
-        <img src={nextIcon} className={clsx(styles.icon, "bg-neutral-100")} />
+        <img
+          src={nextIcon}
+          className={clsx(styles.icon, "bg-neutral-100 p-2")}
+        />
 
         <img src={vueIcon} className={styles.icon} />
         <img src={nodeIcon} className={styles.icon} />
@@ -43,6 +50,14 @@ const Skills = () => {
           className={clsx(styles.icon, "bg-neutral-100")}
         />
         <img src={mongoIcon} className={styles.icon} />
+        <img
+          src={mySqlIcon}
+          className={clsx(styles.icon, "bg-neutral-100 p-2")}
+        />
+        <img
+          src={sqlserverIcon}
+          className={clsx(styles.icon, "bg-neutral-100 p-2")}
+        />
       </div>
     </Section>
   );

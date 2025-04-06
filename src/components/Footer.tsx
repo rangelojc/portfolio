@@ -1,9 +1,9 @@
 const styles = {
-  link: "text-2xl text-gray-400 hover:text-gray-200 transition",
+  link: "text-2xl text-secondary-200 hover:brightness-150 transition-all",
 };
 const Footer = () => {
   return (
-    <section className="mt-40 w-screen flex-col-center gap-y-4 bg-gray-900 text-white p-8 md:py-16">
+    <section className="mt-20 w-screen flex-col-center gap-y-4 bg-secondary-900 p-8">
       <div className="flex-row-v-center gap-x-4">
         <a
           className={styles.link}
@@ -30,7 +30,7 @@ const Footer = () => {
           <i className="fa fa-instagram"></i>
         </a>
       </div>
-      <div className="flex-row-v-center gap-x-2">
+      <div className="flex-row-v-center gap-x-2 text-neutral-50">
         <span>Ramce Concepcion</span>
         <span>© {new Date().getFullYear()}</span>
       </div>
