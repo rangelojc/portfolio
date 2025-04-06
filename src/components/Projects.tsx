@@ -37,7 +37,6 @@ const portfolioItems: PortfolioItem[] = [
     title: "Zombied",
     imageUrl: zomThumb,
   },
-  // Add more items as needed
 ];
 
 const Projects = () => {
