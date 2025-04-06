@@ -61,7 +61,7 @@ const Projects = () => {
             slidesPerView: 3,
           },
         }}
-        className="!pb-10 w-full"
+        className="!pb-8 w-full"
       >
         {portfolioItems.map((item) => (
           <SwiperSlide key={item.id}>
@@ -69,10 +69,11 @@ const Projects = () => {
               <img
                 src={item.imageUrl}
                 alt={item.title}
-                className="w-full h-60 scale-105 object-cover group-hover:scale-110 transition-transform duration-300"
+                className="w-full h-[400px] scale-100 object-cover group-hover:scale-110 transition-transform duration-300"
               />
+
               <div className="p-4">
-                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <h3 className="text-xl font-medium">{item.title}</h3>
               </div>
             </div>
           </SwiperSlide>

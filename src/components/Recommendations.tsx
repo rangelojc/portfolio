@@ -18,8 +18,8 @@ const RecommendationEntry = ({
   quote: string;
   link: string;
 }) => (
-  <div className="relative flex-row-v-center w-full py-4 pr-4 bg-cinder-900 rounded-md shadow-md">
-    <div className="rounded-full size-40 overflow-hidden flex-none mx-8">
+  <div className="relative flex-col-center w-full py-12 px-4 bg-cinder-900 rounded-md shadow-md gap-y-8 md:!flex-row md:pl-0 md:gap-y-0 md:py-4">
+    <div className="rounded-full size-[220px] overflow-hidden flex-none mx-8 md:size-40 ">
       <a
         className="mt-1 text-xs text-blue-400 hover:brightness-125 cursor-pointer transition"
         href={link}
