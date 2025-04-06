@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 @theme {
+  --color-cinder-50: #f7f6f9;
+  --color-cinder-100: #efedf1;
+  --color-cinder-200: #dbd7e0;
+  --color-cinder-300: #bbb4c5;
+  --color-cinder-400: #968ba5;
+  --color-cinder-500: #796c8b;
+  --color-cinder-600: #635772;
+  --color-cinder-700: #51475d;
   --color-cinder-800: #453d4f;
   --color-cinder-900: #3c3644;
   --color-cinder-950: #1b181e;

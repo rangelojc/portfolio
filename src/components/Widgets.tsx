@@ -6,7 +6,7 @@ export const Section = (props: ComponentPropsWithoutRef<"section">) => {
     <section
       {...props}
       className={clsx(
-        "w-full h-auto flex-col-center px-8 md:px-[10%]",
+        "w-full h-auto flex-col-center px-8 lg:px-[10%]",
         props.className
       )}
     >
@@ -20,7 +20,7 @@ export const SectionTitle = (props: ComponentPropsWithoutRef<"h4">) => {
     <h4
       {...props}
       className={clsx(
-        "text-neutral-50 text-2xl font-medium my-8",
+        "text-neutral-50 text-2xl my-8 uppercase text-center tracking-wide",
         props.className
       )}
     >
