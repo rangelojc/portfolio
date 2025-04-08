@@ -16,43 +16,47 @@ type PortfolioItem = {
   title: string;
   imageUrl: string;
   description?: string;
+  stack: string[];
 };
 
 const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: "Kater.ai",
+    title: "Kater Portal",
     imageUrl: katerThumb,
     description:
-      "Various fully functional screens for Kater's LLM-based business intelligence tool. Developed with Vite, React, Xyflow/Reactflow, TailwindCSS, Zustand, HeadlessUI and others.",
+      "Various fully functional screens and features for Kater.ai's LLM-based data analysis and business intelligence portal.",
+    stack: ["React", "Vite", "TailwindCSS", "Zustand", "Reactflow"],
   },
   {
     id: 2,
     title: "The BullX Trade",
     imageUrl: tbxThumb,
-    description:
-      "South Korean-based digital asset trading platform made using React/Next, Redux and SignalR.",
+    description: "South Korean-based digital asset trading platform.",
+    stack: ["Next.js", "Redux", "SignalR"],
   },
   {
     id: 4,
     title: "Zombied",
     imageUrl: zomThumb,
-    description:
-      "Web-based poker game made with Phaser, an Express.js backend and Socket.io for real-time multiplayer logic.",
+    description: "Web-based poker game.",
+    stack: ["Phaser.js", "Express.js", "Socket.io", "MongoDB"],
   },
   {
     id: 3,
     title: "vNext Dashboards",
     imageUrl: vNextThumb,
     description:
-      "Internal and external dashboard applications for Vesta's vNext anti-fraud platform, made with React/Next, Redux, MaterialUI and others.",
+      "Internal and external dashboard applications for Vesta's vNext anti-fraud platform.",
+    stack: ["Next.js", "Redux", "SCSS", "MaterialUI"],
   },
   {
     id: 5,
     title: "vNext Demo Store",
     imageUrl: vNextDemoThumb,
     description:
-      "Demo store application used by Vesta's sales team and integrates the company's anti-fraud services and API endpoints. Developed with React/Next, Redux, MaterialUI.",
+      "Demo store application used by Vesta's sales team and uses the company's anti-fraud services and API endpoints.",
+    stack: ["Next.js", "Redux", "SCSS", "MaterialUI"],
   },
 ];
 
@@ -91,22 +95,36 @@ const Projects = () => {
       >
         {portfolioItems.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="bg-primary-900 rounded shadow-lg overflow-hidden group hover:brightness-125 hover:shadow-xl transition-all duration-300 relative cursor-pointer">
+            <div className="bg-primary-900 rounded shadow-lg overflow-hidden group  hover:shadow-xl transition-all duration-300 relative cursor-pointer">
               <img
                 src={item.imageUrl}
                 alt={item.title}
                 className="relative z-1 w-full h-[400px] scale-105 object-cover group-hover:scale-110 transition-transform duration-300"
               />
 
-              <div className="p-4 relative z-2 bg-primary-900 min-h-36">
+              <div className="p-4 relative z-2 bg-primary-900 group-hover:!bg-primary-800 min-h-42 transition">
                 <h5 className="text-xl font-medium">{item.title}</h5>
                 <p className="text-neutral-300">{item.description}</p>
+
+                <div className="flex-row-v-center flex-wrap">
+                  {item.stack.map((skill) => (
+                    <ProjectSkillPill key={skill} name={skill} />
+                  ))}
+                </div>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
     </Section>
+  );
+};
+
+const ProjectSkillPill = (props: { name: string }) => {
+  return (
+    <div className="bg-secondary-600 text-neutral-50 text-sm font-medium rounded-full px-3 py-1 mr-2 mt-2">
+      {props.name}
+    </div>
   );
 };
 
