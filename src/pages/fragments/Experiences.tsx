@@ -16,7 +16,7 @@ interface ExperienceItem {
 
 const experiences = [
   {
-    companyName: "Kater.ai",
+    companyName: "Kater.ai (YC W24)",
     companyLogoUrl: katerLogo,
     companyLink: "https://www.kater.ai",
     role: "Freelance Frontend Engineer",
