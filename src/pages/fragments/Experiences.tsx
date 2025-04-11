@@ -62,7 +62,14 @@ const ExperienceCard = ({ data }: { data: ExperienceItem }) => {
         rel="noopener noreferrer"
         className="flex items-center mb-4"
       >
-        <Show when={data.companyLogoUrl} fallback={<h3>{data.companyName}</h3>}>
+        <Show
+          when={data.companyLogoUrl}
+          fallback={
+            <h3 className="font-medium tracking-wider text-lg">
+              {data.companyName}
+            </h3>
+          }
+        >
           {() => (
             <img
               src={data.companyLogoUrl}

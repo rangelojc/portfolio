@@ -1,3 +1,5 @@
+import { Transition } from "framer-motion";
+
 export const scrollTargetToChild = (
   target: string,
   child: string,
@@ -13,4 +15,16 @@ export const scrollTargetToChild = (
       behavior: smooth ? "smooth" : "instant",
     });
   }
+};
+
+export const motionEnterFromFadeY = (
+  offset?: number,
+  transitionOptions?: Transition
+) => {
+  return {
+    viewport: { once: true },
+    initial: { opacity: 0, y: offset || 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { ...{ duration: 0.5 }, ...transitionOptions },
+  };
 };

@@ -1,7 +1,8 @@
 import bg from "@/assets/bg.jpg";
 import headshot from "@/assets/headshot.png";
 import clsx from "clsx";
-import { scrollTargetToChild } from "../../utils";
+import { motion } from "framer-motion";
+import { motionEnterFromFadeY, scrollTargetToChild } from "../../utils";
 
 const styles = {
   button:
@@ -24,15 +25,24 @@ const Hero = () => {
 
       <div className="flex-none absolute z-2 flex-col-center size-full gap-y-8 px-4 md:!flex-row md:gap-x-8 md:px-0">
         <div className="w-full space-y-4 flex-col-v-center md:!w-[35%] lg:!w-[30%] md:justify-center">
-          <h1 className="text-3xl md:text-5xl font-light text-center md:!text-left">
+          <motion.h1
+            {...motionEnterFromFadeY(undefined, { delay: 0 })}
+            className="text-3xl md:text-5xl font-light text-center md:!text-left"
+          >
             Hi, I'm <span className="font-medium">Ramce Concepcion</span>
-          </h1>
-          <p className="text-base md:text-lg text-center md:!text-left">
+          </motion.h1>
+          <motion.p
+            {...motionEnterFromFadeY(undefined, { delay: 0.2 })}
+            className="text-base md:text-lg text-center md:!text-left"
+          >
             Seasoned software / front end engineer with years of experience
             writing code for the web.
-          </p>
+          </motion.p>
 
-          <div className="flex-row-center gap-x-4 md:!justify-start text-sm md:text-base">
+          <motion.div
+            {...motionEnterFromFadeY(undefined, { delay: 0.4 })}
+            className="flex-row-center gap-x-4 md:!justify-start text-sm md:text-base"
+          >
             <button
               className={clsx(styles.button, "bg-primary-700")}
               onClick={goToProjects}
@@ -45,12 +55,15 @@ const Hero = () => {
             >
               CONTACT ME
             </a>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="flex-none overflow-hidden size-[200px] md:size-[300px] rounded-full flex-row-v-center">
+        <motion.div
+          {...motionEnterFromFadeY(undefined, { delay: 0.6 })}
+          className="flex-none overflow-hidden size-[200px] md:size-[300px] rounded-full flex-row-v-center"
+        >
           <img src={headshot} />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
