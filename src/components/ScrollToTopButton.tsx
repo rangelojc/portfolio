@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaChevronUp } from "react-icons/fa";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,9 +32,9 @@ const ScrollToTopButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed z-10 bottom-2 right-2 md:bottom-5 md:right-5 flex-none bg-secondary-500 text-white rounded-full size-10 shadow-lg hover:brightness-125 opacity-50 hover:opacity-100 transition-all duration-300 transform cursor-pointer"
+          className="fixed flex-row-center z-10 bottom-2 right-2 md:bottom-5 md:right-5 flex-none bg-secondary-500 text-white rounded-full size-10 shadow-lg hover:brightness-125 opacity-50 hover:opacity-100 transition-all duration-300 transform cursor-pointer"
         >
-          <i className="fa fa-chevron-up"></i>
+          <FaChevronUp />
         </button>
       )}
     </>

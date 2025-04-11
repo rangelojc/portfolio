@@ -19,9 +19,9 @@ const experiences = [
     companyName: "Kater.ai (YC W24)",
     companyLogoUrl: katerLogo,
     companyLink: "https://www.kater.ai",
-    role: "Freelance Frontend Engineer",
+    role: "Frontend Engineer",
     description:
-      "Primary front-end engineer. Closely collaborated with the CTO/CEO especially regarding UI/UX concerns, API implementations and front-end business logic",
+      "YCombinator-backed AI data analytics company. As the primary frontend engineer; closely collaborated with the CTO/CEO especially regarding UI/UX concerns, API implementations and front-end business logic.",
     workPeriod: "Feb 2024 - March 2025",
   },
   {
@@ -30,7 +30,7 @@ const experiences = [
     companyLink: "https://www.vesta.io",
     role: "Software Engineer",
     description:
-      "Part of the front-end team primarily tasked in developing Vesta's dashboard platform. Also led the development of a JavaScript extension that implement's Vesta's API services.",
+      "Part of the frontend team tasked in developing Vesta's dashboard platform in the fintech space. Also led the development of a JavaScript extension that implement's Vesta's API services.",
     workPeriod: "May 2022 - Feb 2024",
   },
   {
@@ -38,7 +38,7 @@ const experiences = [
     companyLink: "https://www.bluekeisoft.com",
     role: "Software Developer",
     description:
-      "Worked on multiple web development projects related to trading, e-commerce, and gaming.",
+      "Software development consultancy firm; worked on multiple web development projects related to trading, e-commerce, and gaming.",
     workPeriod: "Jun 2019 - April 2022",
   },
   {

@@ -1,9 +1,13 @@
+import { DiReact } from "react-icons/di";
+import { FaGithub, FaHeart, FaInstagram, FaLinkedin } from "react-icons/fa";
+
 const styles = {
   link: "text-2xl text-secondary-200 hover:brightness-150 transition-all",
 };
+
 const Footer = () => {
   return (
-    <section className="mt-20 w-screen flex-col-center gap-y-4 bg-secondary-900 p-8">
+    <footer className="mt-20 w-screen flex-col-center gap-y-4 bg-secondary-900 px-8 pt-8 pb-4">
       <div className="flex-row-v-center gap-x-4">
         <a
           className={styles.link}
@@ -11,7 +15,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fa fa-linkedin"></i>
+          <FaLinkedin />
         </a>
         <a
           className={styles.link}
@@ -19,7 +23,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fa fa-github"></i>
+          <FaGithub />
         </a>
         <a
           className={styles.link}
@@ -27,14 +31,19 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fa fa-instagram"></i>
+          <FaInstagram />
         </a>
       </div>
       <div className="flex-row-v-center gap-x-2 text-neutral-50">
         <span>Ramce Concepcion</span>
         <span>© {new Date().getFullYear()}</span>
       </div>
-    </section>
+
+      <span className="mt-4 text-sm flex-row-v-center gap-x-1">
+        Built with <DiReact className="size-5" /> a little bit of
+        <FaHeart className="size-4 ml-1" />
+      </span>
+    </footer>
   );
 };
 
