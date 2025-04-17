@@ -1,9 +1,11 @@
 import katerThumb from "@/assets/projects/kater/kater (1).png";
 import tbxThumb from "@/assets/projects/tbxm-2.png";
+import troyThumb from "@/assets/projects/troy-1.png";
 import vNextDemoThumb from "@/assets/projects/vnext-demostore2.PNG";
 import vNextThumb from "@/assets/projects/vnext-int-3.PNG";
 import zomThumb from "@/assets/projects/zombie-1.png";
 
+import clsx from "clsx";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -17,6 +19,7 @@ type PortfolioItem = {
   imageUrl: string;
   description?: string;
   stack: string[];
+  cover?: boolean;
 };
 
 const portfolioItems: PortfolioItem[] = [
@@ -27,36 +30,58 @@ const portfolioItems: PortfolioItem[] = [
     description:
       "Various fully functional screens and features for Kater.ai's LLM-based data analysis and business intelligence portal.",
     stack: ["React", "Vite", "TailwindCSS", "Zustand", "Reactflow"],
+    cover: true,
   },
   {
     id: 2,
+    title: "Troy Market World",
+    imageUrl: troyThumb,
+    description:
+      "UI development for South Korean-based copy-trading platform web app.",
+    stack: [
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "TradingView",
+      "Zustand",
+      "shadcn/ui",
+      "Framer Motion",
+    ],
+    cover: false,
+  },
+  {
+    id: 3,
+    title: "Zombied",
+    imageUrl: zomThumb,
+    description: "Backend development for a web-based poker game.",
+    stack: ["Express.js", "Socket.io", "MongoDB", "MySQL"],
+    cover: true,
+  },
+  {
+    id: 4,
     title: "The BullX Trade",
     imageUrl: tbxThumb,
     description: "South Korean-based digital asset trading platform.",
     stack: ["Next.js", "Redux", "SignalR"],
-  },
-  {
-    id: 4,
-    title: "Zombied",
-    imageUrl: zomThumb,
-    description: "Web-based poker game.",
-    stack: ["Phaser.js", "Express.js", "Socket.io", "MongoDB"],
-  },
-  {
-    id: 3,
-    title: "vNext Dashboards",
-    imageUrl: vNextThumb,
-    description:
-      "Internal and external dashboard applications for Vesta's vNext anti-fraud platform.",
-    stack: ["Next.js", "Redux", "SCSS", "MaterialUI"],
+    cover: false,
   },
   {
     id: 5,
+    title: "vNext Dashboards",
+    imageUrl: vNextThumb,
+    description:
+      "Internal and external dashboard applications for vNext, Vesta's anti-fraud platform.",
+    stack: ["Next.js", "Redux", "SCSS", "MaterialUI"],
+    cover: true,
+  },
+  {
+    id: 6,
     title: "vNext Demo Store",
     imageUrl: vNextDemoThumb,
     description:
       "Demo store application used by Vesta's sales team and uses the company's anti-fraud services and API endpoints.",
     stack: ["Next.js", "Redux", "SCSS", "MaterialUI"],
+    cover: true,
   },
 ];
 
@@ -95,12 +120,17 @@ const Projects = () => {
       >
         {portfolioItems.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="bg-primary-900 rounded shadow-lg overflow-hidden group  hover:shadow-xl transition-all duration-300 relative cursor-pointer">
-              <img
-                src={item.imageUrl}
-                alt={item.title}
-                className="relative z-1 w-full h-[400px] scale-105 object-cover group-hover:scale-110 transition-transform duration-300"
-              />
+            <div className="bg-[#080808] rounded shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 relative cursor-pointer">
+              <div className="h-[400px]">
+                <img
+                  src={item.imageUrl}
+                  alt={item.title}
+                  className={clsx(
+                    "relative z-1 w-full h-auto scale-100 group-hover:scale-110 transition-transform duration-300",
+                    { "object-cover h-full": item.cover }
+                  )}
+                />
+              </div>
 
               <div className="p-4 relative z-2 bg-primary-900 group-hover:!bg-primary-800 min-h-42 transition">
                 <h5 className="text-xl font-medium">{item.title}</h5>
